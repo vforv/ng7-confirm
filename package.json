@@ -1,13 +1,15 @@
 {
-  "name": "confirm",
-  "version": "0.0.0",
+  "name": "ng7-confirm",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build ng7-confirm",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prepub": "rm -rf src/app/dist/ && ng build ng7-confirm && cp README.md src/app/dist/ng7-confirm && cd src/app/dist/ng7-confirm && npm pack",
+    "pub": "npm publish src/app/dist/ng7-confirm/ng7-confirm-*.tgz"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +28,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.12.0",
+    "@angular-devkit/build-ng-packagr": "~0.12.0",
     "@angular/cli": "~7.2.3",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
@@ -40,8 +43,11 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^4.2.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
+    "tsickle": ">=0.34.0",
+    "tslib": "^1.9.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
   }
