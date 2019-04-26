@@ -1,4 +1,4 @@
-# NG FANCY ALERT
+# NG7 CONFIRM
 ![](https://s3.gifyu.com/images/chrome-capture.gif)
 
 # Installation
